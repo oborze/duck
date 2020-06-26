@@ -1,0 +1,119 @@
+:root {
+  --duck-yellow: #e6bf28;
+  --beak-color: #f39400;
+  --background-color: #333642;
+  --water-color: #4eb2ed;
+  --wing-color: #bb9d28;
+}
+
+body {
+  background: var(--background-color);
+}
+
+.box-canvas {
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  width: 600px;
+  height:600px;
+  background: var(--water-color);
+}
+
+#wave {
+  position: absolute;
+  background: var(--background-color);
+  width: 1000px;
+  height: 1025px;
+  top: -20%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -500px;
+  border-radius: 35%;  
+  animation: wave 15s infinite linear;
+}
+
+@keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+
+#duck-body {
+  position: absolute;
+  background: var(--duck-yellow);
+  width: 240px;
+  height: 200px;
+  border-radius: 57% 5% 50% 50%;
+  z-index: 1;
+  bottom: 18%;
+  left: 180px;
+  animation: duck-body 1.875s infinite 0s linear alternate;
+}
+
+@keyframes duck-body {
+  from { transform: translateY(-80px); }
+  to { transform: translateY(0px); }
+}
+
+#head {
+  position: absolute;
+  background: var(--duck-yellow);
+  z-index: inherit;
+  width: 70px;
+  height: 190px;
+  top: -90px;
+  left: 0px;
+  border-radius: 45% 45% 0% 00%;
+}
+
+#wing-accent {
+  position: absolute;
+  background: var(--wing-color);
+  z-index: 2;
+  width: 150px;
+  height: 100px;
+  top: 15px;
+  left: 50px;
+  border-radius: 60% 60% 18% 60%;
+}
+
+#wing {
+  position: absolute;
+  background: var(--duck-yellow);
+  z-index: 3;
+  width: 160px;
+  height: 90px;
+  top: 11px;
+  left: 35px;
+  border-radius: 5% 52% 18% 72%;
+}
+
+
+#beak {
+  position: absolute;
+  background: var(--beak-color);
+  z-index: 2;
+  width: 30px;
+  height: 10px;
+  top: -54px;
+  left: -4px;
+  border-radius: 45% 45% 45% 45%;
+}
+
+.eye {
+  position: absolute;
+  background: black;
+  z-index: 2;
+  width: 5px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+#left-eye {
+  top: -70px;
+  left: 10px;
+}
+
+#right-eye {
+  top: -70px;
+  left: 30px;
+}
